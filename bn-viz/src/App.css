@@ -1,0 +1,115 @@
+#root {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.main-layout {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.sidebar-left {
+  width: 250px;
+  background-color: #f0f2f5;
+  border-right: 1px solid #d1d5db;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+  z-index: 10;
+}
+
+.sidebar-right {
+  width: 250px;
+  background-color: #f8fafc;
+  border-left: 1px solid #d1d5db;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  z-index: 10;
+}
+
+.canvas-area {
+  flex-grow: 1;
+  position: relative;
+  background-color: #e4ebff;
+}
+
+.pane-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #1d2a4a;
+  text-align: left;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 0.5rem;
+}
+
+.model-item {
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  background: white;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: left;
+  border: 1px solid #e5e7eb;
+  transition: all 0.2s;
+  font-weight: 500;
+}
+
+.model-item:hover {
+  background: #edf2ff;
+  border-color: #c7d2fe;
+}
+
+.model-item.active {
+  background: #3b82f6;
+  color: white;
+  border-color: #2563eb;
+}
+
+.tool-item {
+  padding: 1rem;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  text-align: left;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.tool-name {
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 0.25rem;
+}
+
+.tool-desc {
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+/* Override ReactFlow attribution if needed */
+.react-flow__attribution {
+  display: none;
+}
+
+/* Fix Cursor for Nodes */
+.react-flow__node {
+  cursor: pointer !important;
+}
+
+.react-flow__edge-path {
+  cursor: pointer;
+}
+.tool-mode-explore .scenario-btn {
+  display: none !important;
+}
+.tool-mode-tool1 .scenario-btn {
+  display: flex !important;
+  cursor: pointer;
+}
